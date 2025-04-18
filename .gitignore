@@ -1,0 +1,17 @@
+ # === Node (client) ===
+client/node_modules/
+client/dist/
+client/.vite/
+
+# === .NET (server) ===
+server/bin/
+server/obj/
+server/.vs/
+
+# === Загальне ===
+*.log
+*.user
+*.suo
+*.env
+.vscode/
+.DS_Store

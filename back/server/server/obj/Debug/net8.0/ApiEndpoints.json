@@ -1,0 +1,123 @@
+[
+  {
+    "ContainingType": "server.Controllers.ClientsController",
+    "Method": "SetEmbeddingProvider",
+    "RelativePath": "api/clients/embedding-provider",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "server.Contracts.SetProviderDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.ClientsController",
+    "Method": "Login",
+    "RelativePath": "api/clients/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "server.Contracts.CreateClientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.ClientsController",
+    "Method": "Logout",
+    "RelativePath": "api/clients/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.ClientsController",
+    "Method": "SelectPlan",
+    "RelativePath": "api/clients/plan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "server.Contracts.SelectPlanDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.ClientsController",
+    "Method": "GetProfile",
+    "RelativePath": "api/clients/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.ClientsController",
+    "Method": "Register",
+    "RelativePath": "api/clients/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "server.Contracts.CreateClientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.ClientsController",
+    "Method": "GetApiKey",
+    "RelativePath": "apikey",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clientId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "server.Controllers.ClientsController",
+    "Method": "UploadFaq",
+    "RelativePath": "faq",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clientId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "request",
+        "Type": "server.Contracts.FaqUploadDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

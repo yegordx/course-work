@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\course-work\\back\\server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|d:\\course-work\\back\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|d:\\course-work\\back\\server\\server\\services\\embeddings\\embeddingproviderfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|solutionrelative:server\\services\\embeddings\\embeddingproviderfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|d:\\course-work\\back\\server\\server\\interfaces\\iembeddingprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|solutionrelative:server\\interfaces\\iembeddingprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|d:\\course-work\\back\\server\\server\\services\\clientsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|solutionrelative:server\\services\\clientsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|d:\\course-work\\back\\server\\server\\services\\embeddings\\openaiprovider .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|solutionrelative:server\\services\\embeddings\\openaiprovider .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|d:\\course-work\\back\\server\\server\\contracts\\faquploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|solutionrelative:server\\contracts\\faquploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|d:\\course-work\\back\\server\\server\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{144EDD31-EB6C-4EDF-95F7-F46B8CD67F9C}|server\\server.csproj|solutionrelative:server\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IEmbeddingProvider.cs",
+              "DocumentMoniker": "D:\\course-work\\back\\server\\server\\Interfaces\\IEmbeddingProvider.cs",
+              "RelativeDocumentMoniker": "server\\Interfaces\\IEmbeddingProvider.cs",
+              "ToolTip": "D:\\course-work\\back\\server\\server\\Interfaces\\IEmbeddingProvider.cs",
+              "RelativeToolTip": "server\\Interfaces\\IEmbeddingProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T20:05:37.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmbeddingProviderFactory.cs",
+              "DocumentMoniker": "D:\\course-work\\back\\server\\server\\Services\\Embeddings\\EmbeddingProviderFactory.cs",
+              "RelativeDocumentMoniker": "server\\Services\\Embeddings\\EmbeddingProviderFactory.cs",
+              "ToolTip": "D:\\course-work\\back\\server\\server\\Services\\Embeddings\\EmbeddingProviderFactory.cs",
+              "RelativeToolTip": "server\\Services\\Embeddings\\EmbeddingProviderFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T20:03:19.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\course-work\\back\\server\\server\\Program.cs",
+              "RelativeDocumentMoniker": "server\\Program.cs",
+              "ToolTip": "D:\\course-work\\back\\server\\server\\Program.cs",
+              "RelativeToolTip": "server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T19:59:51.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OpenAiProvider .cs",
+              "DocumentMoniker": "D:\\course-work\\back\\server\\server\\Services\\Embeddings\\OpenAiProvider .cs",
+              "RelativeDocumentMoniker": "server\\Services\\Embeddings\\OpenAiProvider .cs",
+              "ToolTip": "D:\\course-work\\back\\server\\server\\Services\\Embeddings\\OpenAiProvider .cs",
+              "RelativeToolTip": "server\\Services\\Embeddings\\OpenAiProvider .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T19:34:08.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientsService.cs",
+              "DocumentMoniker": "D:\\course-work\\back\\server\\server\\Services\\ClientsService.cs",
+              "RelativeDocumentMoniker": "server\\Services\\ClientsService.cs",
+              "ToolTip": "D:\\course-work\\back\\server\\server\\Services\\ClientsService.cs",
+              "RelativeToolTip": "server\\Services\\ClientsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T19:01:24.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FaqUploadDto.cs",
+              "DocumentMoniker": "D:\\course-work\\back\\server\\server\\Contracts\\FaqUploadDto.cs",
+              "RelativeDocumentMoniker": "server\\Contracts\\FaqUploadDto.cs",
+              "ToolTip": "D:\\course-work\\back\\server\\server\\Contracts\\FaqUploadDto.cs",
+              "RelativeToolTip": "server\\Contracts\\FaqUploadDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T19:34:55.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "D:\\course-work\\back\\server\\server\\Controllers\\ClientsController.cs",
+              "RelativeDocumentMoniker": "server\\Controllers\\ClientsController.cs",
+              "ToolTip": "D:\\course-work\\back\\server\\server\\Controllers\\ClientsController.cs",
+              "RelativeToolTip": "server\\Controllers\\ClientsController.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAcwH4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T19:01:09.634Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
