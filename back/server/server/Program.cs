@@ -26,11 +26,11 @@ builder.Services.Configure<JwtOptions>(
 
 builder.Services.AddSingleton<IJwtProvider, MyJwtProvider>();
 builder.Services.AddSingleton<IPasswordHasher, MyPasswordHasher>();
-builder.Services.AddScoped<ClientsService>();
 
-builder.Services.AddTransient<OpenAiProvider>();
-builder.Services.AddTransient<CohereProvider>();
-builder.Services.AddTransient<HuggingFaceProvider>();
+builder.Services.AddScoped<ClientsService>();
+builder.Services.AddScoped<QuestionsService>();
+builder.Services.AddScoped<CustomerService>();
+
 builder.Services.AddScoped<IEmbeddingProviderFactory, EmbeddingProviderFactory>();
 
 
@@ -77,7 +77,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:5174")
+        policy.WithOrigins("http://localhost:5173")
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials();

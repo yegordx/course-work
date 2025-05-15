@@ -27,8 +27,16 @@
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    position: sticky;
   }
   
+  .faq-scroll-container {
+/* або будь-яка висота, яку хочеш */
+    overflow-y: auto;
+    margin-top: 1rem;
+    padding-right: 0.5rem;
+  }
+
   /* Заголовок */
   .card h2 {
     font-size: 24px;
@@ -142,3 +150,73 @@
     border-radius: 8px;
     color: #b71c1c;
   }
+
+  .drop-zone {
+    border: 2px dashed #ccc;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s, background-color 0.3s;
+    cursor: pointer;
+    background-color: #fafafa;
+  }
+  
+  .drop-zone:hover {
+    background-color: #f1f1f1;
+    border-color: #4caf50;
+  }
+  
+  .drop-zone.selected-card {
+    border: 2px dashed #4caf50;
+    background-color: #e8f5e9;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+  }
+  
+  .hidden-file {
+    display: none;
+  }
+  
+  .parsed-textarea {
+    resize: vertical;
+    min-height: 160px;
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: #333;
+    background-color: #fefefe;
+    margin-bottom: 1.5rem;
+  }
+
+  .back-button {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .back-button img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .back-button:hover img {
+    transform: scale(1.1);
+  }
+  
+  .apikey {
+    display: block;
+    padding: 8px 12px;
+    background: #f0f0f0;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    user-select: all;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    margin-top: 0.5rem;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+

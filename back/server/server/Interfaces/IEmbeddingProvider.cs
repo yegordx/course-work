@@ -2,5 +2,5 @@
 
 public interface IEmbeddingProvider
 {
-    Task<List<List<float>>> GenerateEmbeddingsAsync(List<string> inputs);
+    Task<List<List<double>>> GenerateEmbeddingsAsync(List<string> inputs);
 }

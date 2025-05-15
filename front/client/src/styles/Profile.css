@@ -41,4 +41,12 @@
     user-select: all;
   }
 
+  .link-like {
+    color: #2196f3;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .link-like:hover {
+    color: #0d6efd;
+  }
   

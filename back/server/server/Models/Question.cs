@@ -19,7 +19,7 @@ public class Question
     public string Answer { get; set; } = null!;
 
     [BsonElement("embedding")]
-    public List<float> Embedding { get; set; } = new();
+    public List<double> Embedding { get; set; } = new();
 
     [BsonElement("created_at")]
     [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]

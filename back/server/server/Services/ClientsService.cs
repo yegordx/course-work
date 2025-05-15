@@ -95,6 +95,20 @@ public class ClientsService
         if (string.IsNullOrWhiteSpace(providerName) || string.IsNullOrWhiteSpace(providedKey))
             throw new ArgumentException("Провайдер або ключ не можуть бути порожніми");
 
+        var provider = embeddingProviderFactory.Create(providerName, providedKey);
+
+        try
+        {
+            var embeddings = await provider.GenerateEmbeddingsAsync(new List<string> { "Hello World" });
+
+            if (embeddings == null || embeddings.Count != 1 || embeddings[0].Count == 0)
+                throw new Exception("Некоректна відповідь від провайдера.");
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("Помилка під час перевірки провайдера: " + ex.Message);
+        }
+
         var filter = Builders<Client>.Filter.Eq(c => c.Id, clientId);
 
         var update = Builders<Client>.Update
@@ -127,36 +141,15 @@ public class ClientsService
         };
     }
 
-    public async Task UploadFaq(string clientId, List<FaqItemDto> items)
+    public async Task<string> GetApiKey(string clientId)
     {
         var client = await mongoDbService.Clients
             .Find(c => c.Id == clientId)
             .FirstOrDefaultAsync();
 
-        if (client == null)
-            throw new Exception("Клієнта не знайдено");
+        if (client == null || string.IsNullOrEmpty(client.ApiKey))
+            throw new Exception("API ключ не знайдено або клієнта не існує");
 
-        if (string.IsNullOrEmpty(client.EmbeddingProvider) || string.IsNullOrEmpty(client.ProvidedKey))
-            throw new Exception("Не вказано embedding-провайдера або ключ");
-
-        var provider = embeddingProviderFactory.Create(client.EmbeddingProvider, client.ProvidedKey);
-
-        var questions = items.Select(i => i.Question).ToList();
-
-        var embeddings = await provider.GenerateEmbeddingsAsync(questions);
-
-        var documents = items.Select((item, i) => new Question
-        {
-            ClientId = clientId,
-            Text = item.Question,
-            Answer = item.Answer,
-            Embedding = embeddings[i],
-            CreatedAt = DateTime.UtcNow
-        });
-
-        await mongoDbService.Questions.InsertManyAsync(documents);
-
-        var update = Builders<Client>.Update.Set(c => c.IsActivated, true);
-        await mongoDbService.Clients.UpdateOneAsync(c => c.Id == clientId, update);
+        return client.ApiKey;
     }
 }

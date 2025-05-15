@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { setProvider } from "../api/clientApi";
+import { useAuth } from "../context/AuthContext";
 
 export default function SelectProvider() {
   const navigate = useNavigate();
+  const { refreshProfile } = useAuth();
   const [selected, setSelected] = useState(null);
   const [apiKey, setApiKey] = useState("");
 
@@ -21,6 +23,7 @@ export default function SelectProvider() {
 
     try {
       await setProvider({ providerName: selected, providedKey: apiKey });
+      await refreshProfile();
       navigate("/profile");
     } catch (err) {
       console.error("Помилка збереження провайдера:", err);

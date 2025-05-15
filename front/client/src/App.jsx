@@ -6,6 +6,8 @@ import Profile from "./pages/Profile";
 import SelectPlan from "./pages/SelectPlan";
 import SelectProvider from "./pages/SelectProvider";
 import Header from "./components/Header";
+import ManageQuestions from "./pages/ManageQuestions";
+import ApiKeyPage from "./pages/ApiKeyPage";
 
 import "./styles/App.css";
 import "./styles/Header.css";
@@ -22,6 +24,8 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/select-plan" element={<SelectPlan />} />
         <Route path="/select-provider" element={<SelectProvider />} />
+        <Route path="/questions" element={<ManageQuestions />} />
+        <Route path="/api-key" element={<ApiKeyPage />} />
       </Routes>
     </Router>
   );

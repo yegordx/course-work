@@ -113,34 +113,24 @@ public class ClientsController : ControllerBase
         }
     }
 
+
     [Authorize]
-    [HttpPost("/faq")]
-    public async Task<IActionResult> UploadFaq([FromBody] FaqUploadDto request)
+    [HttpGet("key")]
+    public async Task<IActionResult> GetApiKey()
     {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState);
-
         var clientId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-
         if (string.IsNullOrEmpty(clientId))
             return Unauthorized();
 
         try
         {
-            await clientsService.UploadFaq(clientId, request.Items);
-            return Ok(new { message = "FAQ завантажено успішно" });
+            var apiKey = await clientsService.GetApiKey(clientId);
+            return Ok(new { apiKey });
         }
         catch (Exception ex)
         {
             return BadRequest(new { error = ex.Message });
         }
-    }
-
-    [HttpGet("/apikey")]
-    public async Task<IActionResult> GetApiKey(string clientId)
-    {
-        // Повертає apiKey, якщо користувач активований і має тариф
-        return Ok();
     }
 
     [Authorize]

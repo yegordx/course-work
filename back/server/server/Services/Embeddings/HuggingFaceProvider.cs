@@ -15,9 +15,9 @@ public class HuggingFaceProvider : IEmbeddingProvider
         httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
     }
 
-    public async Task<List<List<float>>> GenerateEmbeddingsAsync(List<string> inputs)
+    public async Task<List<List<double>>> GenerateEmbeddingsAsync(List<string> inputs)
     {
-        var results = new List<List<float>>();
+        var results = new List<List<double>>();
 
         foreach (var input in inputs)
         {
@@ -25,8 +25,8 @@ public class HuggingFaceProvider : IEmbeddingProvider
             var response = await httpClient.PostAsync("https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2", content);
             response.EnsureSuccessStatusCode();
 
-            var embedding = await response.Content.ReadFromJsonAsync<List<List<float>>>();
-            results.Add(embedding?[0] ?? new List<float>());
+            var embedding = await response.Content.ReadFromJsonAsync<List<List<double>>>();
+            results.Add(embedding?[0] ?? new List<double>());
         }
 
         return results;

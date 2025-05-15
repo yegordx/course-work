@@ -67,7 +67,7 @@ export function AuthProvider({ children }) {
         login,
         logout,
         register,
-        refreshProfile // ⬅️ додали
+        refreshProfile 
       }}
     >
       {children}

@@ -6,26 +6,23 @@ using server.Interfaces;
 
 public class OpenAiProvider : IEmbeddingProvider
 {
-    private readonly string apiKey;
     private readonly HttpClient httpClient;
 
     public OpenAiProvider(string apiKey)
     {
-        this.apiKey = apiKey;
-
-        this.httpClient = new HttpClient
+        httpClient = new HttpClient
         {
             BaseAddress = new Uri("https://api.openai.com/v1/")
         };
-        this.httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
+        httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
     }
 
-    public async Task<List<List<float>>> GenerateEmbeddingsAsync(List<string> inputs)
+    public async Task<List<List<double>>> GenerateEmbeddingsAsync(List<string> inputs)
     {
         var requestBody = new
         {
             input = inputs,
-            model = "text-embedding-3-small"
+            model = "text-embedding-ada-002"
         };
 
         var content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
@@ -34,18 +31,20 @@ public class OpenAiProvider : IEmbeddingProvider
         response.EnsureSuccessStatusCode();
 
         var responseBody = await response.Content.ReadAsStringAsync();
-
         var json = JsonDocument.Parse(responseBody);
-        var data = json.RootElement.GetProperty("data");
 
-        var result = new List<List<float>>();
+        var indexToEmbedding = new Dictionary<int, List<double>>();
 
-        foreach (var item in data.EnumerateArray())
+        foreach (var item in json.RootElement.GetProperty("data").EnumerateArray())
         {
-            var vector = item.GetProperty("embedding").EnumerateArray().Select(v => v.GetSingle()).ToList();
-            result.Add(vector);
+            var index = item.GetProperty("index").GetInt32();
+            var rawVector = item.GetProperty("embedding").EnumerateArray().Select(v => v.GetDouble()).ToList();
+
+            indexToEmbedding[index] = rawVector;
         }
 
-        return result;
+        return Enumerable.Range(0, inputs.Count)
+                         .Select(i => indexToEmbedding[i])
+                         .ToList();
     }
 }

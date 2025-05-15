@@ -1,10 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { selectPlan } from "../api/clientApi";
+import { useAuth } from "../context/AuthContext";
 
 export default function SelectPlan() {
   const navigate = useNavigate();
-
+  const { refreshProfile } = useAuth();
   const plans = [
     { months: 1, label: "1 місяць" },
     { months: 2, label: "2 місяці" },
@@ -14,11 +15,17 @@ export default function SelectPlan() {
   const handleSelect = async (months) => {
     try {
       await selectPlan({ durationMonths: months });
+      await refreshProfile(); // 👈 оновлюємо після вибору
       navigate("/select-provider");
     } catch (err) {
       console.error("Помилка при виборі тарифу", err);
       alert("Не вдалося вибрати тариф");
     }
+  };
+
+  const handleSkip = async () => {
+    await refreshProfile(); // 👈 оновлюємо при пропуску також
+    navigate("/profile");
   };
 
   return (
@@ -35,8 +42,8 @@ export default function SelectPlan() {
           ))}
         </div>
 
-        <p className="skip-label" onClick={() => navigate("/profile")}>
-            Пропустити
+        <p className="skip-label" onClick={handleSkip}>
+          Пропустити
         </p>
       </div>
     </div>

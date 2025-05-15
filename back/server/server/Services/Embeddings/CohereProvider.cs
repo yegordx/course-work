@@ -14,7 +14,7 @@ public class CohereProvider : IEmbeddingProvider
         httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
     }
 
-    public async Task<List<List<float>>> GenerateEmbeddingsAsync(List<string> inputs)
+    public async Task<List<List<double>>> GenerateEmbeddingsAsync(List<string> inputs)
     {
         var requestBody = new
         {
@@ -26,11 +26,11 @@ public class CohereProvider : IEmbeddingProvider
         response.EnsureSuccessStatusCode();
 
         var json = await response.Content.ReadFromJsonAsync<CohereEmbeddingResponse>();
-        return json?.Embeddings ?? new List<List<float>>();
+        return json?.Embeddings ?? new List<List<double>>();
     }
 
     private class CohereEmbeddingResponse
     {
-        public List<List<float>> Embeddings { get; set; } = new();
+        public List<List<double>> Embeddings { get; set; } = new();
     }
 }

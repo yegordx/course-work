@@ -1,17 +1,31 @@
- # === Node (client) ===
+# === Node.js (client) ===
 client/node_modules/
 client/dist/
 client/.vite/
+client/.next/
+client/.output/
+client/.cache/
 
 # === .NET (server) ===
-server/bin/
-server/obj/
-server/.vs/
+**/bin/
+**/obj/
+**/.vs/
 
-# === Загальне ===
+# === VS Code ===
+.vscode/
+*.code-workspace
+
+# === System files ===
+.DS_Store
+Thumbs.db
+
+# === Logs and env ===
 *.log
+*.env
+*.env.local
 *.user
 *.suo
-*.env
-.vscode/
-.DS_Store
+
+# === Git ===
+.git/
+.gitignore
