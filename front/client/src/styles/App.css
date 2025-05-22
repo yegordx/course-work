@@ -1,0 +1,222 @@
+.centered-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Панель-картка */
+  .card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .input-spacing {
+    margin-top: 2rem; /* або скільки потрібно */
+  }
+
+  .form-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: sticky;
+  }
+  
+  .faq-scroll-container {
+/* або будь-яка висота, яку хочеш */
+    overflow-y: auto;
+    margin-top: 1rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Заголовок */
+  .card h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Інпут */
+  .input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #4caf50;
+  }
+  
+  /* Кнопка */
+  .button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #43a047;
+  }
+
+  .link {
+    color: #4caf50;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .link:hover {
+    color: #388e3c;
+    text-decoration: underline;
+  }
+
+  .card-row {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Універсальна мала картка (для вибору плану) */
+  .card-small {
+    cursor: pointer;
+    width: 200px;
+    border: 2px solid transparent; /* Початковий border */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Ефект наведення */
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .skip-label {
+    margin-top: 2rem;
+    color: #999;
+    font-size: 0.95rem;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .skip-label:hover {
+    color: #666;
+    text-decoration: underline;
+  }
+
+
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
+  .selected-card {
+    border: 2px solid #4caf50;        /* Зелена рамка */
+    box-shadow: 0 0 12px rgba(76, 175, 80, 0.4); /* Тінь */         /* Невелике збільшення */
+    transition: all 0.5s ease-in-out;
+  }
+
+  .warning-card {
+    background-color: #fff3f3;
+    border-left: 4px solid #e53935;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    color: #b71c1c;
+  }
+
+  .drop-zone {
+    border: 2px dashed #ccc;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s, background-color 0.3s;
+    cursor: pointer;
+    background-color: #fafafa;
+  }
+  
+  .drop-zone:hover {
+    background-color: #f1f1f1;
+    border-color: #4caf50;
+  }
+  
+  .drop-zone.selected-card {
+    border: 2px dashed #4caf50;
+    background-color: #e8f5e9;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+  }
+  
+  .hidden-file {
+    display: none;
+  }
+  
+  .parsed-textarea {
+    resize: vertical;
+    min-height: 160px;
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: #333;
+    background-color: #fefefe;
+    margin-bottom: 1.5rem;
+  }
+
+  .back-button {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .back-button img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .back-button:hover img {
+    transform: scale(1.1);
+  }
+  
+  .apikey {
+    display: block;
+    padding: 8px 12px;
+    background: #f0f0f0;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    user-select: all;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    margin-top: 0.5rem;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
